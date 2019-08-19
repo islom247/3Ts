@@ -12,9 +12,6 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
-
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -119,4 +116,11 @@ function calculateWinner(squares) {
   return null;
 }
 // ========================================
-ReactDOM.render(<Game />, document.getElementById("root"));
+ReactDOM.render(
+  <div>
+    <App />
+    <Game />
+  </div>,
+  document.getElementById("root")
+);
+//ReactDOM.render(<Game />, document.getElementById("root"));
